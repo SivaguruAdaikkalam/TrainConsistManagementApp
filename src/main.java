@@ -1,36 +1,27 @@
-import java.util.LinkedList;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
- class TrainConsistManagementAppUC4 {
+ class TrainConsistManagementAppUC5 {
 
     public static void main(String[] args) {
-        System.out.println("=== Train Consist Management App - UC4 ===");
+        System.out.println("=== Train Consist Management App - UC5 ===");
 
-        // Initialize LinkedList for train consist
-        LinkedList<String> trainConsist = new LinkedList<>();
+        // Initialize LinkedHashSet to maintain insertion order and uniqueness
+        Set<String> trainFormation = new LinkedHashSet<>();
 
-        // Add bogies in order: Engine → Passenger → Cargo → Guard
-        trainConsist.add("Engine");
-        trainConsist.add("Sleeper");
-        trainConsist.add("AC");
-        trainConsist.add("Cargo");
-        trainConsist.add("Guard");
+        // Attach bogies
+        trainFormation.add("Engine");
+        trainFormation.add("Sleeper");
+        trainFormation.add("Cargo");
+        trainFormation.add("Guard");
 
-        System.out.println("\nTrain consist after initial additions:");
-        System.out.println(trainConsist);
+        // Attempt to attach a duplicate bogie
+        trainFormation.add("Sleeper"); // Duplicate, will be ignored
 
-        // Insert Pantry Car at position 2 (index starts at 0)
-        trainConsist.add(2, "Pantry Car");
+        // Display final train formation
+        System.out.println("\nFinal train formation (insertion order preserved, duplicates removed):");
+        System.out.println(trainFormation);
 
-        System.out.println("\nAfter inserting Pantry Car at position 2:");
-        System.out.println(trainConsist);
-
-        // Remove first and last bogie
-        trainConsist.removeFirst();
-        trainConsist.removeLast();
-
-        System.out.println("\nAfter removing first and last bogie:");
-        System.out.println(trainConsist);
-
-        System.out.println("\nFinal ordered train consist ready for operations.");
+        System.out.println("\nApplication ready for next operations.");
     }
 }
