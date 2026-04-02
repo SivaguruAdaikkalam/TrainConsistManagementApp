@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/TrainConsistManagementApp" vcs="Git" />
+=======
+>>>>>>> 2cdf07acc7c413d23c9def6c18c3512cce5f238c
   </component>
 </project>
